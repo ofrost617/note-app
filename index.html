@@ -38,6 +38,7 @@
 
 <form>
   <button id ="button" type="submit" value="Post"> Post </button>
+  <button onclick="document.write('<h1>Hello World!</h1><p>Have a nice day!</p>');">Try it</button>
 </form>
 
 <div id="texxxt">
@@ -45,35 +46,34 @@
 </div>
 <br>
 
-
 <script>
-    listinging();
-
-  function listinging(){
-    document.addEventListener("click", function(e) {
-    // check the target has an attribute of `a[href^="http"]`
-    if(e.target && e.target.nodeName == "a") {
-      addtest();
-    }
-  };
-});
-
-
-    function addtest() {
-      document
-      .getElementById("button")
-      .addEventListener("click", function(clickEvent) {
-           clickEvent.preventDefault();
-           showtextinput();
-         });
-     };
-
-
-    function showtextinput(texxxt) {
-      document
-        .getElementById("texxxt")
-        .innerHTML = texxxt;
-    };
+//     listinging();
+//
+//   function listinging(){
+//     document.addEventListener("click", function(e) {
+//     // check the target has an attribute of `a[href^="http"]`
+//     if(e.target && e.target.nodeName == "a") {
+//       addtest();
+//     }
+//   };
+// });
+//
+//
+//     function addtest() {
+//       document
+//       .getElementById("button")
+//       .addEventListener("click", function(clickEvent) {
+//            clickEvent.preventDefault();
+//            showtextinput();
+//          });
+//      };
+//
+//
+//     function showtextinput(texxxt) {
+//       document
+//         .getElementById("texxxt")
+//         .innerHTML = texxxt;
+//     };
   </script>
 
 
