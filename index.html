@@ -31,17 +31,50 @@
 <br>
 
 <form>
-    <textarea  type="submit" name="message" rows="10" cols="50">
-The cat was playing in the garden.
+    <textarea id ="textinput" name = "textinput" rows="10" cols="50">
+
 </textarea>
 </form>
 
 <form>
-  <button type="submit" value="Post"> Post </post>
+  <button id ="button" type="submit" value="Post"> Post </button>
 </form>
 
+<div id="texxxt">
+
+</div>
 <br>
 
+
+<script>
+    listinging();
+
+  function listinging(){
+    document.addEventListener("click", function(e) {
+    // check the target has an attribute of `a[href^="http"]`
+    if(e.target && e.target.nodeName == "a") {
+      addtest();
+    }
+  };
+});
+
+
+    function addtest() {
+      document
+      .getElementById("button")
+      .addEventListener("click", function(clickEvent) {
+           clickEvent.preventDefault();
+           showtextinput();
+         });
+     };
+
+
+    function showtextinput(texxxt) {
+      document
+        .getElementById("texxxt")
+        .innerHTML = texxxt;
+    };
+  </script>
 
 
 </body>
