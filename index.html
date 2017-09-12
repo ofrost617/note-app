@@ -16,7 +16,28 @@
 </head>
 <body>
 
+<section>
+<form>
+	<textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
+	<br>
+</form>
+<button onclick="postNote()">Post</button>
+</section>
 
+<section>
+	<div>
+		<p id="listOfNotes"></p>
+	</div>
+</section>
+
+<script>
+
+function postNote() {
+	var string = document.getElementById("noteForm").value;
+    document.getElementById("listOfNotes").innerHTML = string;
+};
+
+</script>
 
 </body>
 </html>
