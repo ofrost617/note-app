@@ -16,21 +16,19 @@
 // };
 
 var btn = document.getElementById("btn");
-// var newNote = document.getElementbyId("noteForm").value
-
+var newNote = document.getElementById("noteForm").value
+var saved = []
 
 btn.addEventListener("click", function() {
-	// var newNote = document.getElementbyId("noteForm").value
-	// renderHTML(newNote);
-	console.log("Cicked")
-})
+	var newNote = document.getElementById("noteForm").value;
+	saved.push(newNote)
+	renderHTML
+	console.log(saved);
+});
 
+var listNote = document.getElementById("listofNotes")
 
-
-
-// function postNote() {
-// 	var string = document.getElementById("noteForm").value;
-//     document.getElementById("listOfNotes").innerHTML = string;
-// };
-
+function renderHTML(data) {
+	listNote.insertAdjacentHTML("beforeend", newNote);
+}
 
