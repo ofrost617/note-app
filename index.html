@@ -37,6 +37,21 @@ function postNote() {
     document.getElementById("listOfNotes").innerHTML = string;
 };
 
+var notes = []
+console.log(notes)
+
+var Note = function(string) {  
+  this.note = string
+};
+
+
+function makeNote(string) {
+  var note = new Note(string);
+  // notes.push(note);
+  return note
+};
+
+
 </script>
 
 </body>
