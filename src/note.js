@@ -23,11 +23,13 @@ btn.addEventListener("click", function() {
 });
 
 function renderHTML() {
-var htmlString = "";
+// var htmlString = "";
 
     for (i=0; i<saved.length; i++) {
-    htmlString += "<p>" + saved[i] + "</p>";
+    var displayedList = "<p>" + saved[i] + "</p>";
+    var previewList = displayedList.substring(0, 23) + "...";
     }
-listofNotes.insertAdjacentHTML("beforeend", htmlString);
+    
+listofNotes.insertAdjacentHTML("beforeend", previewList);
     
 }  
