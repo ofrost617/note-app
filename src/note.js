@@ -16,20 +16,24 @@ var listofNotes = document.getElementById("listOfNotes")
 var btn = document.getElementById("btn");
 var saved = []
 btn.addEventListener("click", function() {
-    var newNote = document.getElementById("noteForm").value;
-    saved.push(newNote)
-    renderHTML(saved);
+	var newNote = document.getElementById("noteForm").value;
+	saved.push(newNote)
+	renderHTML(saved);
     // console.log(saved[2])
     // console.log(saved);
 });
 
 function renderHTML() {
 
-    for (i=0; i<saved.length; i++) {
-    var displayedList = "<p>" + saved[i] + "</p>";
-    var previewList = displayedList.substring(0, 23) + "...";
-    }
-    
-listofNotes.insertAdjacentHTML("afterend", previewList);
-    
+	for (i=0; i<saved.length; i++) {
+		var displayedList = "<li><a href>" + saved[i] + "</a></li>";
+		var previewList = displayedList.substring(0, 32) + "...";
+		if (displayedList.length >= 30) {
+			previewList;
+		} else {
+			displayedList;
+		}
+	}
+
+	listofNotes.insertAdjacentHTML("afterend", previewList);   
 }  
