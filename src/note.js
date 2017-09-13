@@ -11,15 +11,23 @@
 //  var note = new Note(string)
 //  return note;
 // };
+var listofNotes = document.getElementById("listOfNotes")
+
 var btn = document.getElementById("btn");
 var saved = []
 btn.addEventListener("click", function() {
     var newNote = document.getElementById("noteForm").value;
     saved.push(newNote)
-    // renderHTML
-    console.log(saved);
+    renderHTML(saved);
+    // console.log(saved);
 });
-var listNote = document.getElementById("listofNotes")
+
 function renderHTML() {
-    listNote.insertAdjacentHTML("afterend", newNote);
-}
+var htmlString = "";
+
+    for (i=0; i<saved.length; i++) {
+    htmlString += "<p>" + saved[i] + "</p>";
+    }
+listofNotes.insertAdjacentHTML("beforeend", htmlString);
+    
+}  
