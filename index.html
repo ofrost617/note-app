@@ -1,58 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <!-- Brunch library -->
 <script src='brunch/brunch.js'></script>
-
-<!-- Include src files here -->
-<script src='src/circle.js'></script>
-<script src='src/note.js'></script>
-
 <!-- Include spec files here -->
-<script src='spec/circleSpec.js'></script>
 <script src='spec/noteSpec.js'></script>
-
 </head>
 <body>
-
 <section>
 <form>
-	<textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
-	<br>
+    <textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
+    <br>
 </form>
-<button onclick="postNote()">Post</button>
+<button id ="btn"> Post </button>
 </section>
-
 <section>
-	<div>
-		<p id="listOfNotes"></p>
-	</div>
+    <h1> Notes: </h1>   
+    <p id="listOfNotes"></p>
+    </div>
 </section>
-
-<script>
-
-function postNote() {
-	var string = document.getElementById("noteForm").value;
-    document.getElementById("listOfNotes").innerHTML = string;
-};
-
-var notes = []
-console.log(notes)
-
-var Note = function(string) {  
-  this.note = string
-};
-
-
-function makeNote(string) {
-  var note = new Note(string);
-  // notes.push(note);
-  return note
-};
-
-
-</script>
-
+<!-- Include src files here -->
+<script src = "./src/note.js"></script>
 </body>
 </html>
