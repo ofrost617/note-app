@@ -19,17 +19,17 @@ btn.addEventListener("click", function() {
     var newNote = document.getElementById("noteForm").value;
     saved.push(newNote)
     renderHTML(saved);
+    // console.log(saved[2])
     // console.log(saved);
 });
 
 function renderHTML() {
-// var htmlString = "";
 
     for (i=0; i<saved.length; i++) {
     var displayedList = "<p>" + saved[i] + "</p>";
     var previewList = displayedList.substring(0, 23) + "...";
     }
     
-listofNotes.insertAdjacentHTML("beforeend", previewList);
+listofNotes.insertAdjacentHTML("afterend", previewList);
     
 }  
