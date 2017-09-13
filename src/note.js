@@ -25,10 +25,11 @@ btn.addEventListener("click", function() {
 
 function renderHTML() {
 
-    for (i = 0; i < saved.length; i++) {
-    var displayedList = saved[i] + "<br><br>";
+    for (i=0; i<saved.length; i++) {
+    var displayedList = "<p>" + saved[i] + "</p>";
+    var previewList = displayedList.substring(0, 23) + "...";
     }
-
-listofNotes.insertAdjacentHTML("afterend", displayedList );
+    
+listofNotes.insertAdjacentHTML("afterend", previewList);
     
 }  
