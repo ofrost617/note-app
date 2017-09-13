@@ -16,19 +16,19 @@
 // };
 
 var btn = document.getElementById("btn");
-var newNote = document.getElementById("noteForm").value
 var saved = []
+
 
 btn.addEventListener("click", function() {
 	var newNote = document.getElementById("noteForm").value;
 	saved.push(newNote)
-	renderHTML
+	// renderHTML
 	console.log(saved);
 });
 
 var listNote = document.getElementById("listofNotes")
 
-function renderHTML(data) {
-	listNote.insertAdjacentHTML("beforeend", newNote);
+function renderHTML() {
+	listNote.insertAdjacentHTML("afterend", newNote);
 }
 
