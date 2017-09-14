@@ -11,7 +11,8 @@
 
 var listofNotes = document.getElementById("listOfNotes")
 var expansion = document.getElementById("expansion")
-var linkPreviews = document.getElementById("linkPreviews")
+// var linkPreviews = document.getElementById("linkPreviews")
+
 
 var btn = document.getElementById("btn");
 var saved = []
@@ -23,14 +24,20 @@ btn.addEventListener("click", function() {
 
 function renderHTML() {
     for (i=0; i<saved.length; i++) {
+    var element = saved[i]
     var displayedList = "<p>" + saved[i] + "</p>";
-    var previewList = "<p>" + displayedList.substring(0, 23) + "</p>";
-    var linkList = "<li><a href=#"+i+">" + saved[i].substring(0, 20)+ "</a></li>"
-
-    console.log(previewList)
+    var previewList = '<a href = # onclick ="show('+i+')">' + saved[i].substring(0, 20) + "</a><br><br>";
+   // var previewList = '<button onclick ="show('+i+')">' + saved[i].substring(0, 20) + "</button><br><br>";
+    // var linkList = "<li><a href=#"+i+">" + saved[i].substring(0, 20)+ "</a></li>"
     }  
-
     // listofNotes.insertAdjacentHTML("afterend", previewList);
-    linkPreviews.insertAdjacentHTML("afterend", linkList)
+    linkPreviews.insertAdjacentHTML("afterend", previewList)
+    console.log(element)
+  }
 
-}
+function show(value) {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "hidden");
+    document.body.appendChild(x);
+    document.getElementById("expansion").innerHTML = saved[value]
+    }
