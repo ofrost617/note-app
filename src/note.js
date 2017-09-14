@@ -11,7 +11,9 @@
 //  var note = new Note(string)
 //  return note;
 // };
+
 var listofNotes = document.getElementById("listOfNotes")
+var expansion = document.getElementById("expansion")
 
 var btn = document.getElementById("btn");
 var saved = []
@@ -19,17 +21,40 @@ btn.addEventListener("click", function() {
     var newNote = document.getElementById("noteForm").value;
     saved.push(newNote)
     renderHTML(saved);
-    // console.log(saved[2])
-    // console.log(saved);
 });
 
 function renderHTML() {
-
     for (i=0; i<saved.length; i++) {
     var displayedList = "<p>" + saved[i] + "</p>";
-    var previewList = displayedList.substring(0, 23) + "...";
-    }
-    
+    var previewList = "<p>" + displayedList.substring(0, 23) + "</p>";
+    // var linkname = "#" + displayedList.substring(3, 8, 0)
+    console.log(previewList)
+    }  
+
 listofNotes.insertAdjacentHTML("afterend", previewList);
-    
-}  
+
+// expansion.insertAdjacentHTML("afterend", displayedList)
+}
+
+
+    // <script>
+    //   makeUrlChangeShowAnimalForCurrentPage();
+
+    //   function makeUrlChangeShowAnimalForCurrentPage() {
+    //     window.addEventListener("hashchange", showAnimalForCurrentPage);
+    //   };
+
+    //   function showAnimalForCurrentPage() {
+    //     showAnimal(getAnimalFromUrl(window.location));
+    //   };
+
+    //   function getAnimalFromUrl(location) {
+    //     return location.hash.split("#")[1];
+    //   };
+
+    //   function showAnimal(animal) {
+    //     document
+    //       .getElementById("animal")
+    //       .innerHTML = animal;
+    //   };
+    // </script>
