@@ -3,8 +3,15 @@
 <head>
 <!-- Brunch library -->
 <script src='brunch/brunch.js'></script>
+
+
+<!-- Include src files here -->
+<script src='src/note.js'></script>
+
 <!-- Include spec files here -->
 <script src='spec/noteSpec.js'></script>
+  
+  
 </head>
 <body>
 <section>
@@ -15,18 +22,26 @@
 <button id ="btn"> Post </button>
 </section>
 <section>
-<div>
+<!--<div>
 	<h1> Notes: </h1>  
 
 <p id="listOfNotes"></p>
 
-</div>
+
+  <div id = "textBox">
+    <textarea rows="4" cols="50">
+      This is a text box
+    </textarea>
+  </div>
+
 
 <div>
 <h1> links: </h1>
+
+
 </div>
 
-
+<p id="linkPreviews"></p>
 
 </section>
 

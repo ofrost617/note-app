@@ -1,7 +1,4 @@
-// (function(exports) {
-//   function Note() {
-//     this.posts = 5;
-//   };
+
 //   exports.Note = Note;
 // })(this);
 // var Note = function(string){
@@ -14,6 +11,7 @@
 
 var listofNotes = document.getElementById("listOfNotes")
 var expansion = document.getElementById("expansion")
+var linkPreviews = document.getElementById("linkPreviews")
 
 var btn = document.getElementById("btn");
 var saved = []
@@ -27,15 +25,19 @@ function renderHTML() {
     for (i=0; i<saved.length; i++) {
     var displayedList = "<p>" + saved[i] + "</p>";
     var previewList = "<p>" + displayedList.substring(0, 23) + "</p>";
+    var linkList = "<li><a href=#"+i+">" + saved[i].substring(0, 20)+ "</a></li>"
+
     // var linkname = "#" + displayedList.substring(3, 8, 0)
     console.log(previewList)
     }  
 
-listofNotes.insertAdjacentHTML("afterend", previewList);
+// listofNotes.insertAdjacentHTML("afterend", previewList);
+linkPreviews.insertAdjacentHTML("afterend", linkList)
 
 // expansion.insertAdjacentHTML("afterend", displayedList)
 }
 
+// "<li><a href=#"+i+">" + this.previewList + "</a></li>"
 
     // <script>
     //   makeUrlChangeShowAnimalForCurrentPage();
@@ -57,4 +59,4 @@ listofNotes.insertAdjacentHTML("afterend", previewList);
     //       .getElementById("animal")
     //       .innerHTML = animal;
     //   };
-    // </script>
+
