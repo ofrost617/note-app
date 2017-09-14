@@ -1,7 +1,4 @@
-// (function(exports) {
-//   function Note() {
-//     this.posts = 5;
-//   };
+
 //   exports.Note = Note;
 // })(this);
 // var Note = function(string){
@@ -62,4 +59,4 @@ linkPreviews.insertAdjacentHTML("afterend", linkList)
     //       .getElementById("animal")
     //       .innerHTML = animal;
     //   };
-    // </script>
+
