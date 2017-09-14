@@ -2,20 +2,70 @@
 <html>
 <head>
 
-<!-- Brunch library -->
-<script src='brunch/brunch.js'></script>
+  <!-- Brunch library -->
+  <script src='brunch/brunch.js'></script>
 
-<!-- Include src files here -->
-<script src='src/circle.js'></script>
-<script src='src/note.js'></script>
+  <!-- Include src files here -->
+  <script src='src/note.js'></script>
 
-<!-- Include spec files here -->
-<script src='spec/circleSpec.js'></script>
-<script src='spec/noteSpec.js'></script>
+  <!-- Include spec files here -->
+  <script src='spec/noteSpec.js'></script>
+
 
 </head>
 <body>
 
+  <section>
+  <form>
+  	<textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
+  	<br>
+  </form>
+  <button id = btn >Post</button>
+  </section>
+
+  <section>
+  	<div>
+  		<p id="listOfNotes"></p>
+  	</div>
+  </section>
+
+  <script>
+
+
+    var btn = document.getElementById("btn");
+    var list = [];
+    btn.addEventListener("click", function() {
+    var string = document.getElementById("noteForm").value;
+
+      function Note(content) {
+          this.content = content;
+      };
+      var note = new Note();
+
+      note.content = string;
+
+      list.push(note);
+      console.log(list);
+      document.getElementById("listOfNotes").insertAdjacentHTML("beforeEnd", note.content)
+    });
+
+    // //Storing data:
+    // myObj = { "name":"John", "age":31, "city":"New York" };
+    // myJSON = JSON.stringify(myObj);
+    // localStorage.setItem("testJSON", myJSON);
+    //
+    // //Retrieving data:
+    // text = localStorage.getItem("testJSON");
+    // obj = JSON.parse(text);
+    // document.getElementById("demo").innerHTML = obj.name;
+    // Try it Yourself »
+
+    // myObj = { "name":"John", "age":30, "car":null };
+    // for (x in myObj) {
+    //     document.getElementById("demo").innerHTML += x;
+    // }
+    
+  </script>
 
 
 </body>
