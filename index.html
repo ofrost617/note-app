@@ -1,53 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Brunch library -->
-<script src='brunch/brunch.js'></script>
+	<!-- Brunch library -->
+	<script src='brunch/brunch.js'></script>
 
-
-<!-- Include src files here -->
-<script src='src/note.js'></script>
-
-<!-- Include spec files here -->
-<script src='spec/noteSpec.js'></script>
-  
-  
+	<!-- Include spec files here -->
+	<script src='spec/noteSpec.js'></script>
 </head>
+
 <body>
-<section>
-<form>
-    <textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
-    <br>
-</form>
-<button id ="btn"> Post </button>
-</section>
-<section>
+	<section>
+		<form>
+			<textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
+			<br>
+		</form>
+		<button id ="btn"> Post </button>
+	</section>
+
 <!--<div>
 	<h1> Notes: </h1>  
 
-<p id="listOfNotes"></p>
+	<p id="listOfNotes"></p>
+</div>-->
 
+<section>
+	<div>
+		<h1> links: </h1>
 
-  <div id = "textBox">
-    <textarea rows="4" cols="50">
-      This is a text box
-    </textarea>
-  </div>
-
-
-<div>
-<h1> links: </h1>
-
-
-</div>
-
-<p id="linkPreviews"></p>
+		<p id="linkPreviews"></p>
+	</div>
 
 </section>
 
-<!-- Include src files here -->
 <script src = "./src/note.js"></script>
-
-</script>
 </body>
 </html>

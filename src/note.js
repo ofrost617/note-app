@@ -27,36 +27,10 @@ function renderHTML() {
     var previewList = "<p>" + displayedList.substring(0, 23) + "</p>";
     var linkList = "<li><a href=#"+i+">" + saved[i].substring(0, 20)+ "</a></li>"
 
-    // var linkname = "#" + displayedList.substring(3, 8, 0)
     console.log(previewList)
     }  
 
-// listofNotes.insertAdjacentHTML("afterend", previewList);
-linkPreviews.insertAdjacentHTML("afterend", linkList)
+    // listofNotes.insertAdjacentHTML("afterend", previewList);
+    linkPreviews.insertAdjacentHTML("afterend", linkList)
 
-// expansion.insertAdjacentHTML("afterend", displayedList)
 }
-
-// "<li><a href=#"+i+">" + this.previewList + "</a></li>"
-
-    // <script>
-    //   makeUrlChangeShowAnimalForCurrentPage();
-
-    //   function makeUrlChangeShowAnimalForCurrentPage() {
-    //     window.addEventListener("hashchange", showAnimalForCurrentPage);
-    //   };
-
-    //   function showAnimalForCurrentPage() {
-    //     showAnimal(getAnimalFromUrl(window.location));
-    //   };
-
-    //   function getAnimalFromUrl(location) {
-    //     return location.hash.split("#")[1];
-    //   };
-
-    //   function showAnimal(animal) {
-    //     document
-    //       .getElementById("animal")
-    //       .innerHTML = animal;
-    //   };
-
