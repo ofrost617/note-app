@@ -14,3 +14,12 @@
 //   var note = new Note();
 //   assert.isTrue(textarea.id === "textBox");
 // };
+
+(function(exports) {
+    function testTextBoxIsThere() {
+        // var note = new Note();
+        assert.isTrue(textarea.id === "noteForm");
+    };
+
+    testTextBoxIsThere();
+})(this);

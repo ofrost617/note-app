@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Brunch library -->
-	<script src='brunch/brunch.js'></script>
 
-	<!-- Include spec files here -->
-	<script src='spec/noteSpec.js'></script>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Brunch library -->
+    <script src='brunch/brunch.js'></script>
+    <!-- Include spec files here -->
+    <script src='spec/noteSpec.js'></script>
 </head>
 
 <body>
-	<section>
-		<form>
-			<textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
-			<br>
-		</form>
-		<button id ="btn"> Post </button>
-	</section>
-
-<!--<div>
+    <section>
+    	<div class="header"><h1>Note App</h1></div>
+        <form>
+            <textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
+            <br>
+        </form>
+        <button id="btn"> Post </button>
+    </section>
+    <!--<div>
 	<h1> Notes: </h1>  
 
 	<p id="listOfNotes"></p>
 </div>-->
-
-<section>
-	<div>
-		<h1> Notes: </h1>
-
-		<p id="linkPreviews"></p>
-	</div>
-
-	<div>
-		<h1> More information </h1>
-		
-		<p id= "expansion"></p>
-
-
-</section>
-
-
-<script src = "./src/note.js"></script>
+    <section>
+        <div class="notes">
+            <h3> Notes: </h3>
+            <p id="linkPreviews"></p>
+        </div>
+        <div class="expansion">
+            <!-- <h1> More information </h1> -->
+            <p id="expansion"></p>
+    </section>
+    <script src="./src/note.js"></script>
 </body>
+
 </html>

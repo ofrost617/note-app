@@ -1,7 +1,7 @@
 (function(exports) {
-  function Circle() {
-    this.radius = 10;
-  };
+    function Circle() {
+        this.radius = 10;
+    };
 
-  exports.Circle = Circle;
+    exports.Circle = Circle;
 })(this);
