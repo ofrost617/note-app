@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Brunch library -->
     <script src='brunch/brunch.js'></script>
     <!-- Include spec files here -->
@@ -10,6 +11,7 @@
 
 <body>
     <section>
+    	<div class="header"><h1>Note App</h1></div>
         <form>
             <textarea rows="10" cols="50" type="textarea" name="textarea" id="noteForm"></textarea>
             <br>
@@ -22,11 +24,11 @@
 	<p id="listOfNotes"></p>
 </div>-->
     <section>
-        <div>
-            <h1> Notes: </h1>
+        <div class="notes">
+            <h3> Notes: </h3>
             <p id="linkPreviews"></p>
         </div>
-        <div>
+        <div class="expansion">
             <!-- <h1> More information </h1> -->
             <p id="expansion"></p>
     </section>
